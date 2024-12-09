@@ -12,7 +12,7 @@ void push(int value){
     else{
         stack[pointer+1]=value;
         pointer++;
-      //return;
+        return;
     }
 }
 int pop(void){
@@ -23,8 +23,8 @@ int pop(void){
     else{
         int throw=stack[pointer];
         pointer--;
+        printf("\n");
         return throw;
-    printf("\n");
     }
 }
 void showStack(void){
@@ -43,9 +43,6 @@ void stop(void){
     exit(0);
 }
 int main(void){
-    push(10);
-    showStack();
-  //printf("%d\t",pop());
     showStack();
     while(106){
         printf("\nDo you wanna input something else in stack ?(y/no)\t");
@@ -59,13 +56,12 @@ int main(void){
         printf("\nDo you wanna pop in stack ?(y/no)\t");
             scanf("%s",&choose);
             if(choose=='y'){
-                pop();
+               printf("%d",pop());
                 showStack();
             }
         printf("If You wanna exit loop press 'e' :>");  
         if(choose=='e'){
             stop();
         }
-            
     }
 }

@@ -14,8 +14,9 @@ int main()
         };
         arr[j + 1] = key;
     }
-    for(int i=0;i<lenArr;i++){
-        printf("%d\t",arr[i]);
+    for (int i = 0; i < lenArr; i++)
+    {
+        printf("%d\t", arr[i]);
     }
     return 0;
 }

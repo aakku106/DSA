@@ -52,49 +52,14 @@ int peek()
 
 int main()
 {
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d", queue[i]);
-    }
-    printf("\n");
-
     enqueue(1);
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d", queue[i]);
-        // queue[i];
-    }
-    printf("\n");
-
     enqueue(2);
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d", queue[i]);
-        // queue[i];
-    }
-    printf("\n");
-
     enqueue(3);
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d", queue[i]);
-        // queue[i];
-    }
-    printf("\n");
-
     printf("Front of the queue: %d\n", peek());
     printf("\n");
-
     while (!isEmpty())
     {
         printf("Dequeued: %d\n", dequeue());
     }
-    printf("\n");
-    for (int i = 0; i < 10; i++)
-    {
-        printf("%d", queue[i]);
-        // queue[i];
-    }
-    printf("\n");
     return 0;
 }

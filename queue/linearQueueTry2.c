@@ -39,15 +39,21 @@ void enQueue(void)
 void deQueue(void)
 {
     int design = isEmpty();
-    if (design == 106 || front == 10)
+    if (design == 106 || front == MAX)
     {
         printf("\nNothing to dequeue...The queue is empty\n");
+
         return;
     }
     else
     {
         arr[front++] = 0;
         printf("\nThe\t%d\telement of queue has been removed.\n", front);
+        if (front > rarer)
+        {
+            front = 0;
+            rarer = -1;
+        }
     }
 }
 
@@ -76,71 +82,39 @@ int isEmpty()
 void peek(void)
 {
     int design = isEmpty();
-    if (design == 106 || front == 10)
-        printf("\nThe array/queue is empty, nothing to show...");
+    if (design == 106 || front == MAX - 1)
+        printf("\nThe array/queue is empty, nothing to show...\n");
     else
-        printf("\nThe front-most element in queue is\t%d\n", arr[front]);
+        printf("\nThe front-most element in queue is\t%d\nand last element is\t%d\n", arr[front], arr[rarer]);
 }
 
 int main(void)
 {
-    for (int i = 0; i < 20; i++)
+    int choose;
+    printf("\nWelcome, this shows the example of linear queue with size %d\n\t\tchoose following options to perform task in queue\n", MAX);
+    do
     {
-        peek();
-        enQueue();
-        printArray();
-    }
-    for (int i = 0; i < 20; i++)
-    {
-        peek();
-        deQueue();
-        printArray();
-    }
-
-    peek();
-    printArray();
-    enQueue();
-    printArray();
-    peek();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // enQueue();
-    // printArray();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
-    // deQueue();
-    // peek();
+        printf("\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Print Queue\n5. Exit\n");
+        scanf("%d", &choose);
+        switch (choose)
+        {
+        case 1:
+            enQueue();
+            break;
+        case 2:
+            deQueue();
+            break;
+        case 3:
+            peek();
+            break;
+        case 4:
+            printArray();
+            break;
+        case 5:
+            printf("Exiting program.....\nThanks for using!!!!!\n");
+            break;
+        default:
+            printf("Invalid choice. Try again.\n");
+        }
+    } while (choose != 5);
 }

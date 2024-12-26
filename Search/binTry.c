@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int nums[] = {1, 3, 5, 6};
+    int nums[] = {1, 3,23,4, 5, 6};
     int min = 0;
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int mid = (min + numsSize) / 2;

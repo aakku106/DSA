@@ -1,10 +1,10 @@
-By: NirajBhttrai(DSA)
+GivenBy: NirajBhttrai(DSA) to: AdarashaGaihre
 Write a program to implement Stack operations (push, pop, peek) using an array.       [✅]
 Write a program to implement Queue operations (enqueue, dequeue, peek) using an array.       [✅]
 Write a program to implement Singly Linked List operations: add, addToLast, addAfterXPosition, and delete.
 Write a program to implement Bubble Sort to sort an array.       [✅]
 Write a program to implement Quick Sort to sort an array.       [✅]
-Write a program to implement Linear Search to find an element in an array.
+Write a program to implement Linear Search to find an element in an array.       [✅]
 Write a program to implement Binary Search to find an element in a sorted array.       [✅]
 Write a program to implement Merge Sort to sort an array.       [✅]
 Write a program to implement a Priority Queue using an array.

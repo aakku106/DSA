@@ -13,6 +13,11 @@ void sort(int  array[],int lenArray){
 int main(){
 int array[]={9,4,2,12,31213,5,7,8};
     int lenArray=sizeof(array)/sizeof(array[0]);
+for (int i = 0; i < lenArray; i++)
+{
+    printf("%d\t", array[i]);
+}
+printf("\n");
     sort( array,lenArray);
     for(int i=0;i<lenArray;i++){
         printf("%d\t",array[i]);}

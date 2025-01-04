@@ -58,14 +58,14 @@ int main(void)
     {
         printf("\nDo you wanna input something else in stack ?(y/n)\t");
         char choose;
-        scanf("%s", &choose);
+        scanf(" %c", &choose);
         if (choose == 'y')
         {
             push(takeInput());
             showStack();
         }
         printf("\nDo you wanna pop in stack ?(y/n)\t");
-        scanf("%s", &choose);
+        scanf(" %c", &choose);
         if (choose == 'y')
         {
             printf("%d", pop());

@@ -13,11 +13,12 @@ void showStack(void)
         printf("Stack is empty.\n");
         return;
     }
+    printf("In stack...\n\t\t");
     for (int i = 0; i <= pointer; i++)
     {
         printf("%d\t", stack[i]);
     }
-    printf("\n");
+    printf("\n....\n");
 }
 void push(int value)
 {
@@ -84,7 +85,7 @@ int main(void)
         scanf(" %c", &choose);
         if (toupper(choose) == 'Y')
         {
-            printf("%d", pop());
+            printf("\n%d\t popped\n\n", pop());
             showStack();
         }
         else if (toupper(choose) == 'N')

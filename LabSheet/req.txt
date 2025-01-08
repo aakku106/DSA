@@ -1,6 +1,6 @@
 GivenBy: NirajBhttrai(DSA) to: AdarashaGaihre
-Write a program to implement Stack operations (push, pop, peek) using an array.       [✅]
-Write a program to implement Queue operations (enqueue, dequeue, peek) using an array.       [✅]
+Write a program to implement Stack operations (push, pop, peek) using an array.       [✅] need to do again 
+Write a program to implement Queue operations (enqueue, dequeue, peek) using an array.       [✅] need to do again
 Write a program to implement Singly Linked List operations: add, addToLast, addAfterXPosition, and delete.
 Write a program to implement Bubble Sort to sort an array.       [✅]
 Write a program to implement Quick Sort to sort an array.       [✅]

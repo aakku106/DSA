@@ -18,7 +18,7 @@ int main(void){
     last->data=03;
 
     show(head);
-    insertAfterNode(last);
+    insertAfterNode(head);// only applicable if the previous node is known and avaible 
     show(head);
 
 }

@@ -39,6 +39,8 @@ int main(void){
     printf("\n%d\n",second->data);
     printf("\n%d\n",third->data);
 
+// This show a verry simple inplementaion of linked list...
+
 
 
     

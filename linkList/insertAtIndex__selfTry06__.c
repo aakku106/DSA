@@ -34,16 +34,15 @@ void show(struct Node *pointer){
 void insertAtGivenIndex(int index){
     struct Node *pointer,*p;
     pointer=(struct Node *)malloc(sizeof(struct Node));
-    p=head;
+    p=head;// purano head ly xopera naya p banako
     int i=0;
     while(i!=index-1){
-        p=p->next;
-        printf("\n\n\t%d\n\n",p->data);
+        p=p->next;//yedi 1 bhanda thullo num xa bhanni, tyo node bhanda agillo rode ma rukkinxa
         i++;
     }
     pointer->data=106;
-    pointer->next=p->next;
-    p->next=pointer;
+    pointer->next=p->next;// naya node next ly purana node ko next sanga jodako.
+    p->next=pointer;// purana node ko next naya node banako.
 
 }
 

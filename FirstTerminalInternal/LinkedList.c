@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-typedef struct Node{
+typedef struct NODE{
     int data;
-    struct Node *next;
-}Node;
-Node *head,*second,*third,*last;
+    struct NODE *next;
+}NODE;
+NODE *head,*second,*third,*last;
 
 
-void insertAtBeginning(Node *pointer);
-void insertAtEnd();
+void insertAtBeginning(NODE *pointer,int);
+void insertAtEnd(int);
 void insertAfter();
 void insertBefore();
 void insertIn();
@@ -19,14 +19,14 @@ void deleteAfter();
 void deleteBefore();
 void deleteIn();
 
-void show(Node *pointer);
+void show(NODE *pointer);
 
 int main(void){
 
-    head=(Node *)malloc(sizeof(Node));
-    second=(Node *)malloc(sizeof(Node));
-    third=(Node *)malloc(sizeof(Node));
-    last=(Node *)malloc(sizeof(Node));
+    head=(NODE *)malloc(sizeof(NODE));
+    second=(NODE *)malloc(sizeof(NODE));
+    third=(NODE *)malloc(sizeof(NODE));
+    last=(NODE *)malloc(sizeof(NODE));
 
     head->data=01;
     second->data=02;
@@ -39,12 +39,16 @@ int main(void){
     last->next=NULL;
 
     show(head);
+    insertAtBeginning(head,106);
+    show(head);
+
+
 
 
     return 0;
 }
 
-void show(Node *pointer){
+void show(NODE *pointer){
     printf("\n_________________________________________\n\n|\tDATA\t|\tNextAddress\t|\n_________________________________________\n");
     while(pointer){
         printf("\n|\t%d\t|\t%p\t|\n",pointer->data,pointer->next);
@@ -53,4 +57,13 @@ void show(Node *pointer){
     printf("\n_________________________________________\n");
 }
 
-// void insertAtBeginning(Node *pointer){}
+void insertAtBeginning(NODE *pointer,int data){
+    NODE *p=(NODE *)malloc(sizeof(NODE));
+    p->data=data;
+    p->next=head;
+    head=p;
+}
+
+// void insertAtEnd(int){
+
+// }

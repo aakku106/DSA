@@ -13,7 +13,7 @@ int main(void){
 }
 int Search(int arr[],int target,int len){
     int low=0,
-    high = len,
+    high = len-1,
     mid;
     while(low<=high){
         mid=(low+high)/2;

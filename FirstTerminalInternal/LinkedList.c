@@ -41,6 +41,9 @@ int main(void){
     show(head);
     insertAtBeginning(head,106);
     show(head);
+    insertAtEnd(106);
+    show(head);
+
 
 
 
@@ -64,6 +67,12 @@ void insertAtBeginning(NODE *pointer,int data){
     head=p;
 }
 
-// void insertAtEnd(int){
-
-// }
+void insertAtEnd(int data){
+    NODE  *pointer = (NODE *)malloc(sizeof(NODE));
+    NODE *p=head;
+    while(p->next!=NULL)
+        p=p->next;
+    p->next=pointer;
+    pointer->data=data;
+    pointer->next=NULL;
+}

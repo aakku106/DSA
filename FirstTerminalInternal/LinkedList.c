@@ -4,7 +4,7 @@ typedef struct NODE{
     int data;
     struct NODE *next;
 }NODE;
-NODE *head,*second,*third,*last;
+NODE *head,*second,*third,*fourth;
 
 
 void insertAtBeginning(NODE *pointer,int);
@@ -27,17 +27,17 @@ int main(void){
     head=(NODE *)malloc(sizeof(NODE));
     second=(NODE *)malloc(sizeof(NODE));
     third=(NODE *)malloc(sizeof(NODE));
-    last=(NODE *)malloc(sizeof(NODE));
+    fourth=(NODE *)malloc(sizeof(NODE));
 
     head->data=01;
     second->data=02;
     third->data=03;
-    last->data=04;
+    fourth->data=04;
 
     head->next=second;
     second->next=third;
-    third->next=last;
-    last->next=NULL;
+    third->next=fourth;
+    fourth->next=NULL;
 
     show(head);
     insertAtBeginning(head,106);// makes new head NODE.
@@ -76,11 +76,15 @@ void insertAtBeginning(NODE *pointer,int data){
 
 void insertAtEnd(NODE *p,int data){
     NODE  *pointer = (NODE *)malloc(sizeof(NODE));
+    pointer->data=data;
+    pointer->next=NULL;
+    if(head==NULL){
+        head=pointer;
+        return;
+    }
     while(p->next!=NULL)
         p=p->next;
     p->next=pointer;
-    pointer->data=data;
-    pointer->next=NULL;
 }
 void insertAfter(NODE *p,int data,int insertAfter){
     int i=0;
@@ -88,16 +92,21 @@ void insertAfter(NODE *p,int data,int insertAfter){
     while(i!=insertAfter){
         p=p->next;i++;
     }
+    if(p==NULL) return;
     pointer->next=p->next;
     p->next=pointer;
     pointer->data=data;
 }
 void insertBefore(NODE *p,int data,int insertBefore){
+    if(insertBefore==0){
+        insertAtBeginning(head,data);
+    }
     NODE *pointer=(NODE *)malloc(sizeof(NODE));
     int i = 0;
     while(i!=insertBefore-1){
         p=p->next;i++;
     }
+    if(p==NULL||p->next==NULL) return;
     pointer->next=p->next;
     p->next=pointer;
     pointer->data=data;
@@ -108,6 +117,7 @@ void insertIn(NODE *p,int data,int insertIn){
         p=p->next;
         i++;
     }
+    if(p==NULL) return;
     p->data=data;
 }
 void insertNodeIn(NODE *p,int data,int insertNodeIn){
@@ -117,6 +127,7 @@ void insertNodeIn(NODE *p,int data,int insertNodeIn){
         i++;
         p=p->next;
     }
+    if(p==NULL) return;
     pointer->next=p->next;
     p->next=pointer;
     pointer->data=data;

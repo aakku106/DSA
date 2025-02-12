@@ -12,6 +12,7 @@ void insertAtEnd(NODE *p,int);
 void insertAfter(NODE *p,int,int);
 void insertBefore(NODE *p,int,int);
 void insertIn(NODE *p,int,int);
+void insertNodeIn(NODE *p,int,int);
 
 void deleteAtBeginning();
 void deleteAtEnd();
@@ -49,7 +50,8 @@ int main(void){
     show(head);
     insertIn(head,123,6);//Erases old value and puts new value of data.
     show(head);
-    
+    insertNodeIn(head,11111,6);
+    show(head);
 
 
 
@@ -107,4 +109,15 @@ void insertIn(NODE *p,int data,int insertIn){
         i++;
     }
     p->data=data;
+}
+void insertNodeIn(NODE *p,int data,int insertNodeIn){
+    NODE *pointer=(NODE *)malloc(sizeof(NODE));
+    int i=0;
+    while(i!=insertNodeIn-1){
+        i++;
+        p=p->next;
+    }
+    pointer->next=p->next;
+    p->next=pointer;
+    pointer->data=data;
 }

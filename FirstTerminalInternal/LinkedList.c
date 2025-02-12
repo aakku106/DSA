@@ -39,13 +39,13 @@ int main(void){
     last->next=NULL;
 
     show(head);
-    insertAtBeginning(head,106);
+    insertAtBeginning(head,106);// makes new head NODE.
     show(head);
-    insertAtEnd(head,106);
+    insertAtEnd(head,106);// add new NODE at last of linked list.
     show(head);
-    insertAfter(head,100,1);
+    insertAfter(head,100,1);// Insert Node after given node index.
     show(head);
-    insertBefore(head,101,4);
+    insertBefore(head,101,4);// Insert Node Before given NODE index.
     show(head);
     insertIn(head,123,6);//Erases old value and puts new value of data.
     show(head);

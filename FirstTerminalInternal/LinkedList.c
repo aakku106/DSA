@@ -8,8 +8,8 @@ NODE *head,*second,*third,*last;
 
 
 void insertAtBeginning(NODE *pointer,int);
-void insertAtEnd(int);
-void insertAfter();
+void insertAtEnd(NODE *p,int);
+void insertAfter(int);
 void insertBefore();
 void insertIn();
 
@@ -41,7 +41,7 @@ int main(void){
     show(head);
     insertAtBeginning(head,106);
     show(head);
-    insertAtEnd(106);
+    insertAtEnd(head,106);
     show(head);
 
 
@@ -67,12 +67,14 @@ void insertAtBeginning(NODE *pointer,int data){
     head=p;
 }
 
-void insertAtEnd(int data){
+void insertAtEnd(NODE *p,int data){
     NODE  *pointer = (NODE *)malloc(sizeof(NODE));
-    NODE *p=head;
     while(p->next!=NULL)
         p=p->next;
     p->next=pointer;
     pointer->data=data;
     pointer->next=NULL;
+}
+void insertAfter(int data){
+
 }

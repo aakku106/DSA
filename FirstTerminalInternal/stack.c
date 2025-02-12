@@ -24,5 +24,5 @@ int pop(void){
         printf("\nstack is empty\n");
     else
         return stack[pointer--];
-    return 0;
+    return -1;
 }

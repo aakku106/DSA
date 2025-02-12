@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX 10
-int stack[10];
+int stack[MAX];
 int peek = -1;
 void push(int value)
 {

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include<stdbool.h>
 int main(void) {
-
     int numbers[]={1,2,3,4,5};
     int low=0,high=4;
     int mid = (low+high)/2;
@@ -26,11 +25,5 @@ mid=(low+high)/2;
     if(outOfIndex==false){
         printf("Out of index");
     }
-
-
-
-
-
-
     return 0;
 }

@@ -27,3 +27,7 @@ int main()
            printf("%d",mid);
     return 0;
 }
+ private void ccn(){
+    string wee = "ccn";:w
+
+}

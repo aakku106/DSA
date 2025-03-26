@@ -56,12 +56,11 @@ int EnQueue(int data)
     if (front == -1) // First element
     {
         front = rear = 0;
-        queue[rear] = data;
-        return data;
+        return queue[rear] = data;
     }
     rear = (rear + 1) % max;
-    queue[rear] = data;
-    return data;
+
+    return queue[rear] = data;
 }
 
 int DeQueue(void)
@@ -71,16 +70,15 @@ int DeQueue(void)
         printf("\t\tQueue is Empty!!\n");
         return -1;
     }
-    int removed = queue[front];
-    if (front == rear) // Reset when last element is removed
+    int removed = queue[front]; // Store value before updating front
+    if (front == rear)          // Reset when last element is removed
         front = rear = -1;
     else
         front = (front + 1) % max;
-
     return removed;
 }
 
-void show()
+void show(void)
 {
     if (front == -1)
     {

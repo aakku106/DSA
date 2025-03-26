@@ -34,14 +34,14 @@ int main()
     show();
     DeQueue(); // 5  shall see error here queue is empty
     peek();    // shall say its empty
-    
+
     // we can also do
     printf("InQueueing\t%d\n%d\n", InQueue(106), peek()); // no need to call show function to see whats going on
     printf("InQueueing\t%d\n", InQueue(108));
     printf("InQueueing\t%d\n", InQueue(107));
     printf("InQueueing\t%d\n", InQueue(109));
     printf("InQueueing\t%d\n", InQueue(101));
-    // printf("InQueueing\t%d\n", InQueue(1010)); // It says Enqueuing 1 because we returned -1 in IsFull function
+    printf("InQueueing\t%d\n", InQueue(1010)); // It says Enqueuing 1 because we returned -1 in IsFull function
     printf("DeQueueing\t%d\n", DeQueue());
     printf("DeQueueing\t%d\n", DeQueue());
     printf("DeQueueing\t%d\n", DeQueue());
@@ -50,8 +50,14 @@ int main()
     printf("DeQueueing\t%d\n", DeQueue());
     printf("InQueueing\t%d\n", InQueue(103));
     printf("DeQueueing\t%d\n", DeQueue());
-    printf("InQueueing\t%d\n", InQueue(10));
+    printf("InQueueing\t%d\n", InQueue(1 ));
+    printf("InQueueing\t%d\n", InQueue(12));
+    printf("InQueueing\t%d\n", InQueue(13));
+    printf("InQueueing\t%d\n", InQueue(14));
+    printf("InQueueing\t%d\n", InQueue(15));
+    printf("InQueueing\t%d\n", InQueue(19));
     printf("peeking\t%d\n", peek());
+    printf("DeQueueing\t%d\n", DeQueue());
     show();
 
     return 0;
@@ -61,27 +67,37 @@ int InQueue(int data)
 {
     if (IsFull() == 0)
         return queue[++rear] = data;
-    else
-        printf("\t\tqueue is Full\t\n");
+    printf("\t\tqueue is Full\t\n");
+    return -1;
 }
 int DeQueue()
 {
-    if (IsEmpty() == 0)
-        return queue[rear--];
-    printf("\t\tQueue is Empty\t\n");
-    return -1;
+    if (IsEmpty())
+    {
+        printf("\t\tQueue is Empty\t\n");
+        return -1;
+    }
+    int removed = queue[front++];
+
+    // Reset queue when empty
+    if (front > rear)
+    {
+        front = 0;
+        rear = -1;
+    }
+    return removed;
 }
+
 int peek()
 {
     if (IsEmpty() == 0)
-        return queue[rear];
+        return queue[front];
     printf("\t\tQueue is Empty\t\n");
     return -1;
 }
 int IsFull()
 {
-    if (rear > MAX - 2) // max is 5 and we need error on greater than 4 so rear shall be greater than max-2 ie rear > 5-2 = 3, greater than 3 means (4) it throw error when rear goes greater than 4
-    // so rear > MAX - 2  is when rear == 4;
+    if (rear >= MAX - 1)
     {
         return -1;
     }
@@ -97,8 +113,15 @@ int IsEmpty()
 }
 void show()
 {
-    printf("\n");
-    for (int i = 0; i < MAX; i++)
-        printf("\t%d\t", queue[i]);
+    printf("\nQueue: ");
+    if (IsEmpty())
+    {
+        printf("Empty\n");
+        return;
+    }
+    for (int i = front; i <= rear; i++)
+    {
+        printf("%d ", queue[i]);
+    }
     printf("\n");
 }

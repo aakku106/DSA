@@ -52,3 +52,10 @@ int isEmpty(void) {
     return -1;
   return 0;
 }
+void peek(void) {
+  if (isEmpty() != -1) {
+    printf("\t\t--->%d<---\n", stack[pointer]);
+    return;
+  }
+  printf("Its empty \n");
+}

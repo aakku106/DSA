@@ -50,7 +50,7 @@ int IsFull(void) {
   return 0;
 }
 int IsEmpty(void) {
-  if (rear < 0)
+  if (rear < front)
     return -1;
   return 0;
 }

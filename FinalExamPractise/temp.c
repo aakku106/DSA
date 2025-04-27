@@ -45,7 +45,7 @@ int EnQueue(int data) {
     return queue[rear] = data;
   }
   rear = (rear + 1) % MAX;
-  return queue[rear];
+  return queue[rear] = data;
 }
 int DeQueue() {
   if (front == -1) {

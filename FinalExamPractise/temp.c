@@ -64,7 +64,6 @@ void peek() {
   if (front == -1) {
     printf("XXX----Queue is empty----XXX\n");
     return;
-  } else {
-    printf("\n\t\t%d\n", queue[front]);
   }
+  printf("\n\t\t%d\n", queue[front]);
 }

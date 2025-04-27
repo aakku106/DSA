@@ -45,6 +45,12 @@ int Enqueue(int data) {
 int Dequeue(void) {
   if ((front < 0)) {
     printf("emptuyuyy queue\n");
-    return 0;
+    return -1;
   }
+  int remove = queue[front];
+  if (rear == front)
+    front = rear = -1;
+  else
+    front = (front + 1) % MAX;
+  return remove;
 }

@@ -37,3 +37,9 @@ int push(int data) {
   printf("Stack is full------XXXXXXXX\n");
   return -1;
 }
+int pop() {
+  if (isEmpty() != -1)
+    return stack[pointer--];
+  printf("Stack is empty ---------XXXXXXXXXXx\n");
+  return -1;
+}

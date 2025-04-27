@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX 3
-int stack[MAX], pop(), push(int), isEmpty(), isFull(), pointer = 0;
+int stack[MAX], pop(), push(int), isEmpty(), isFull(), pointer = -1;
 void peek();
 int main(void) {
   while (106) {
@@ -32,7 +32,7 @@ int main(void) {
 }
 int push(int data) {
   if (isFull() != -1)
-    return stack[pointer++];
+    return stack[++pointer];
   printf("Stack is full------XXXXXXXX\n");
   return -1;
 }
@@ -44,6 +44,11 @@ int pop(void) {
 }
 int isFull(void) {
   if (pointer >= MAX - 1)
+    return -1;
+  return 0;
+}
+int isEmpty(void) {
+  if (pointer > 0)
     return -1;
   return 0;
 }

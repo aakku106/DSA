@@ -32,7 +32,7 @@ int main(void) {
 }
 int push(int data) {
   if (isFull() != -1)
-    return stack[++pointer];
+    return stack[++pointer] = data;
   printf("Stack is full------XXXXXXXX\n");
   return -1;
 }
@@ -48,7 +48,7 @@ int isFull(void) {
   return 0;
 }
 int isEmpty(void) {
-  if (pointer > 0)
+  if (pointer < 0)
     return -1;
   return 0;
 }

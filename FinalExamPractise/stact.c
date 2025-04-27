@@ -1,4 +1,3 @@
-#include <_stdlib.h>
 #include <stdio.h>
 #define MAX 3
 int stak[MAX], pop(), push(int), isEmpty(), isFull(), pointer;
@@ -19,6 +18,15 @@ int main(void) {
       data = pop();
       if (data != -1)
         printf("\n--->%d<---Poped out from top of stack\n", data);
+      break;
+    case 3:
+      peek();
+      break;
+    case 4:
+      return 0;
+    default:
+      printf("\t\tChoose correct optn\n");
     }
   }
+  return 0;
 }

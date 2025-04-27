@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <sys/_types/_sigaltstack.h>
 #define MAX 3
 int stack[MAX], pop(), push(int), isEmpty(), isFull(), pointer = 0;
 void peek();
@@ -37,9 +36,10 @@ int push(int data) {
   printf("Stack is full------XXXXXXXX\n");
   return -1;
 }
-int pop() {
+int pop(void) {
   if (isEmpty() != -1)
     return stack[pointer--];
   printf("Stack is empty ---------XXXXXXXXXXx\n");
   return -1;
 }
+int isFull(void) { if () }

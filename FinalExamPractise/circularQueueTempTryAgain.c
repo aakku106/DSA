@@ -35,12 +35,12 @@ int Enqueue(int data) {
     printf("Queue is fukk\n");
     return -1;
   }
-  if (rear > 0) {
+  if (rear < 0) {
     front = rear = 0;
     return queue[rear] = data;
   }
   rear = (rear + 1) % MAX;
-  return queue[rear];
+  return queue[rear] = data;
 }
 int Dequeue(void) {
   if ((front < 0)) {
@@ -53,4 +53,11 @@ int Dequeue(void) {
   else
     front = (front + 1) % MAX;
   return remove;
+}
+void peek(void) {
+  if (front < 0) {
+    printf("It empty\n");
+    return;
+  }
+  printf("\n\t\t--->%d<---is coming next\n", queue[front]);
 }

@@ -42,4 +42,8 @@ int pop(void) {
   printf("Stack is empty ---------XXXXXXXXXXx\n");
   return -1;
 }
-int isFull(void) { if () }
+int isFull(void) {
+  if (pointer >= MAX - 1)
+    return -1;
+  return 0;
+}

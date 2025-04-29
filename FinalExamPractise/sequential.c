@@ -5,7 +5,7 @@ int main() {
   int lenArr = sizeof(arr) / sizeof(arr[0]);
   int target, result;
   while (106) {
-    printf("Enter target or -1 to close\n\n");
+    printf("\nEnter target or -1 to close\n\n");
     scanf("%d", &target);
     switch (target) {
     case -1:
@@ -13,10 +13,10 @@ int main() {
     default:
       result = linearSearch(arr, lenArr, target);
       if (result != -1) {
-        printf("Element %d found at index %d.\n", target, result);
+        printf("\nElement %d found at index %d.\n", target, result);
         break;
       }
-      printf("Element %d not found in the array.\n", target);
+      printf("\nElement %d not found in the array.\n", target);
       break;
     }
   }

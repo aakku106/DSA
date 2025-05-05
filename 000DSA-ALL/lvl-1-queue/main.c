@@ -1,8 +1,9 @@
 #include "CircularQueue.h"
 #include "LinearQueue.h"
 #include <stdio.h>
-void linearqueue(void);
-void circularqueue(void);
+#include <stdlib.h>
+void linear_queue(void);
+void circular_queue(void);
 int main() {
 
   int choice;
@@ -14,10 +15,10 @@ int main() {
 
     switch (choice) {
     case 1:
-      linearqueue();
+      linear_queue();
       break;
     case 2:
-      circularqueue();
+      circular_queue();
       break;
     case 0:
       printf("Exiting...\n");
@@ -30,7 +31,7 @@ int main() {
 
   return 0;
 }
-void linearQueue(void) {
+void linear_queue(void) {
   while (106) {
     printf("Enter ur choice\n\t\t1. Enqueue\n\t\t2. Dequeue\n\t\t3. "
            "peek\n\t\t0. choose ZERO to colse program\n\t\t4. TO Exit "
@@ -54,10 +55,9 @@ void linearQueue(void) {
       break;
     case 0:
       printf("Exiting...\n");
-      return;
+      exit(0);
     case 4:
       return;
-      break;
     default:
       printf("\n\t\tCHOOE CORRECT OPTION\n");
     }
@@ -87,12 +87,11 @@ void circularqueue(void) {
       break;
     case 4:
       return;
-      break;
     case 0:
       printf("Exiting...\n");
-      return;
+      exit(0);
     default:
-      printf("Chose correct wefkopwfk\n");
+      printf("Chose correct Option\n");
     }
   }
 }

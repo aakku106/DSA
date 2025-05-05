@@ -3,9 +3,9 @@
 #include <stdio.h>
 void linearqueue(void);
 void circularqueue(void);
-int choice, choose;
 int main() {
 
+  int choice;
   while (106) {
     printf("\nChoose Data Structure:\n");
     printf("\n|\t\t--1. Linear Queue\n|\t\t2. Circular Queue\n|\t\t0. Exit\n");
@@ -15,8 +15,10 @@ int main() {
     switch (choice) {
     case 1:
       linearqueue();
+      break;
     case 2:
       circularqueue();
+      break;
     case 0:
       printf("Exiting...\n");
       return 0;
@@ -33,7 +35,7 @@ void linearQueue(void) {
     printf("Enter ur choice\n\t\t1. Enqueue\n\t\t2. Dequeue\n\t\t3. "
            "peek\n\t\t0. choose ZERO to colse program\n\t\t4. TO Exit "
            "LinearQueue");
-    int data;
+    int choose, data;
     scanf("%d", &choose);
     switch (choose) {
     case 1:
@@ -54,7 +56,7 @@ void linearQueue(void) {
       printf("Exiting...\n");
       return;
     case 4:
-      main();
+      return;
       break;
     default:
       printf("\n\t\tCHOOE CORRECT OPTION\n");
@@ -84,7 +86,7 @@ void circularqueue(void) {
       Cpeek();
       break;
     case 4:
-      main();
+      return;
       break;
     case 0:
       printf("Exiting...\n");

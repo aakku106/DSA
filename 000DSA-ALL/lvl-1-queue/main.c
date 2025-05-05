@@ -64,7 +64,7 @@ void linear_queue(void) {
   }
 }
 
-void circularqueue(void) {
+void circular_queue(void) {
   while (106) {
     printf("Choose betn:\n\t\t1. TO enqueue\n\t\t2. TO dequeue\n\t\t3.To "
            "Peek\n\t\t4.To exit Circular queue\n\t\t0. To exit program\n");

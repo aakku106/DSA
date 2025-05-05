@@ -14,7 +14,7 @@ int main() {
 
     switch (choice) {
     case 1:
-      while (choose != 4) {
+      while (106) {
         printf("Enter ur choice\n\t\t1. Enqueue\n\t\t2. Dequeue\n\t\t3. "
                "peek\n\t\t0. choose ZERO to colse program\n\t\t4. TO Exit "
                "LinearQueue");
@@ -46,7 +46,7 @@ int main() {
         }
       }
     case 2:
-      while (choose != 4) {
+      while (106) {
         printf("Choose betn:\n\t\t1. TO enqueue\n\t\t2. TO dequeue\n\t\t3.To "
                "Peek\n\t\t4.To exit Circular queue\n\t\t0. To exit program\n");
         int choose, data;

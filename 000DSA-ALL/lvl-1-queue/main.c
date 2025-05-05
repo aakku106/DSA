@@ -2,8 +2,6 @@
 #include "LinearQueue.h"
 #include <stdio.h>
 #include <stdlib.h>
-void linear_queue(void);
-void circular_queue(void);
 int main() {
 
   int choice;
@@ -30,68 +28,4 @@ int main() {
   }
 
   return 0;
-}
-void linear_queue(void) {
-  while (106) {
-    printf("Enter ur choice\n\t\t1. Enqueue\n\t\t2. Dequeue\n\t\t3. "
-           "peek\n\t\t0. choose ZERO to colse program\n\t\t4. TO Exit "
-           "LinearQueue");
-    int choose, data;
-    scanf("%d", &choose);
-    switch (choose) {
-    case 1:
-      printf("\nEnter num to Enqueue\n");
-      scanf("%d", &data);
-      if (EnQueue(data) != -1)
-        printf("\n|---\t\t%d<----Enqueues---|\n", data);
-      break;
-    case 2:
-      data = DeQueue();
-      if (data != -1)
-        printf("\n|---\t\t%d<----DEQUYED---|\n", data);
-      break;
-    case 3:
-      Lpeek();
-      break;
-    case 0:
-      printf("Exiting...\n");
-      exit(0);
-    case 4:
-      return;
-    default:
-      printf("\n\t\tCHOOE CORRECT OPTION\n");
-    }
-  }
-}
-
-void circular_queue(void) {
-  while (106) {
-    printf("Choose betn:\n\t\t1. TO enqueue\n\t\t2. TO dequeue\n\t\t3.To "
-           "Peek\n\t\t4.To exit Circular queue\n\t\t0. To exit program\n");
-    int choose, data;
-    scanf("%d", &choose);
-    switch (choose) {
-    case 1:
-      printf("\t\tEnter number to qneueue\n");
-      scanf("%d", &data);
-      if (Enqueue(data) != -1)
-        printf("%d<---Enqueued\n", data);
-      break;
-    case 2:
-      data = Dequeue();
-      if (data != -1)
-        printf("%d----Dequeued\n", data);
-      break;
-    case 3:
-      Cpeek();
-      break;
-    case 4:
-      return;
-    case 0:
-      printf("Exiting...\n");
-      exit(0);
-    default:
-      printf("Chose correct Option\n");
-    }
-  }
 }

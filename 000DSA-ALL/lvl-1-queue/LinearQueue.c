@@ -1,7 +1,41 @@
 #include "LinearQueue.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int front = 0, rear = -1, queue[MAX];
+
+void linear_queue(void) {
+  while (106) {
+    printf("Enter ur choice\n\t\t1. Enqueue\n\t\t2. Dequeue\n\t\t3. "
+           "peek\n\t\t0. choose ZERO to colse program\n\t\t4. TO Exit "
+           "LinearQueue");
+    int choose, data;
+    scanf("%d", &choose);
+    switch (choose) {
+    case 1:
+      printf("\nEnter num to Enqueue\n");
+      scanf("%d", &data);
+      if (EnQueue(data) != -1)
+        printf("\n|---\t\t%d<----Enqueues---|\n", data);
+      break;
+    case 2:
+      data = DeQueue();
+      if (data != -1)
+        printf("\n|---\t\t%d<----DEQUYED---|\n", data);
+      break;
+    case 3:
+      Lpeek();
+      break;
+    case 0:
+      printf("Exiting...\n");
+      exit(0);
+    case 4:
+      return;
+    default:
+      printf("\n\t\tCHOOE CORRECT OPTION\n");
+    }
+  }
+}
 
 int EnQueue(int data) {
   if (IsFull() != -1)

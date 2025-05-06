@@ -1,25 +1,37 @@
 #include "CircularQueue.h"
+#include "../color.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 int queue[MAX], Cfront = -1, Crear = -1;
 
 void circular_queue(void) {
   while (106) {
-    printf("Choose betn:\n\t\t1. TO enqueue\n\t\t2. TO dequeue\n\t\t3.To "
-           "Peek\n\t\t4.To exit Circular queue\n\t\t0. To exit program\n");
+    printf(CYAN
+           "\n\n\t\t===============Choose betn=======================\n" RESET);
+    usleep(50000);
+    printf(YELLOW "\t\t1. TO enqueue\n" RESET);
+    usleep(50000);
+    printf(YELLOW "\t\t2. TO dequeue\n" RESET);
+    usleep(50000);
+    printf(YELLOW "\t\t3. To Peek\n" RESET);
+    usleep(50000);
+    printf(CYAN "\t\t4. To exit Circular queue\n" RESET);
+    usleep(50000);
+    printf(RED "\t\t0.To exit program\n " RESET);
     int choose, data;
     scanf("%d", &choose);
     switch (choose) {
     case 1:
-      printf("\t\tEnter number to qneueue\n");
+      printf("--->\t\tEnter number to qneueue\n");
       scanf("%d", &data);
       if (Enqueue(data) != -1)
-        printf("%d<---Enqueued\n", data);
+        printf(GREEN "\t\t--->%d<---Enqueued\n", data);
       break;
     case 2:
       data = Dequeue();
       if (data != -1)
-        printf("%d----Dequeued\n", data);
+        printf(GREEN "\t\t---->%d<----Dequeued\n", data);
       break;
     case 3:
       Cpeek();
@@ -27,17 +39,17 @@ void circular_queue(void) {
     case 4:
       return;
     case 0:
-      printf("Exiting...\n");
+      printf(YELLOW "Exiting...\n" RESET);
       exit(0);
     default:
-      printf("Chose correct Option\n");
+      printf(RED "Chose correct Option\n" RESET);
     }
   }
 }
 
 int Enqueue(int data) {
   if ((Crear + 1) % MAX == Cfront) {
-    printf("Queue is fukk\n");
+    printf(RED "XXX---Queue is FULL----XXX\n" RESET);
     return -1;
   }
   if (Crear < 0) {
@@ -49,7 +61,7 @@ int Enqueue(int data) {
 }
 int Dequeue(void) {
   if ((Cfront < 0)) {
-    printf("emptuyuyy queue\n");
+    printf(RED "XXX---queue is EMQTY----XXX\n" RESET);
     return -1;
   }
   int remove = queue[Cfront];
@@ -61,8 +73,8 @@ int Dequeue(void) {
 }
 void Cpeek(void) {
   if (Cfront < 0) {
-    printf("It empty\n");
+    printf(RED "xxx___It empty___xxx\n" RESET);
     return;
   }
-  printf("\n\t\t--->%d<---is coming next\n", queue[Cfront]);
+  printf(YELLOW "\n\t\t--->%d<---is coming next\n", queue[Cfront]);
 }

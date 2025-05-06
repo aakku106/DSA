@@ -1,13 +1,18 @@
 #include "CircularQueue.h"
 #include "LinearQueue.h"
 #include <stdio.h>
+#include <unistd.h>
 void queue_main_call() {
   int choice;
   while (106) {
     printf("\t\t\033[1;34mChoose Data Structure:\033[0m\n");
+    usleep(50000);
     printf("\t\t\033[1;32m--1. Linear Queue\033[0m\n");
+    usleep(50000);
     printf("\t\t\033[1;33m--2. Circular Queue\033[0m\n");
+    usleep(50000);
     printf("\t\t\033[1;31m--0. Exit\033[0m\n");
+    usleep(50000);
     printf("Enter choice---->\t");
     scanf("%d", &choice);
     switch (choice) {

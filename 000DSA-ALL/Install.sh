@@ -1,9 +1,8 @@
 #!/bin/bash
 
-echo "🔨 Compiling project..."
+echo -e "\033[1;36m🔨 Compiling project...\033[0m"
 
 if gcc main.c lvl-1-queue/*.c -o queue; then
-    echo "✅ Build successful! Run with: ./queue"
+    echo -e "\033[1;32m✅ Build Success! Launch with: ./queue\033[0m"
 else
-    echo "❌ Build failed. Check the errors above."
-fi
+    echo -e "\033[1;31m❌ Build Failed! Check the errors Above ...\033[0m"fi

@@ -4,8 +4,10 @@
 void queue_main_call() {
   int choice;
   while (106) {
-    printf("\nChoose Data Structure:\n");
-    printf("\n|\t\t--1. Linear Queue\n|\t\t2. Circular Queue\n|\t\t0. Exit\n");
+    printf("\t\t\033[1;34mChoose Data Structure:\033[0m\n");
+    printf("\t\t\033[1;32m--1. Linear Queue\033[0m\n");
+    printf("\t\t\033[1;33m--2. Circular Queue\033[0m\n");
+    printf("\t\t\033[1;31m--0. Exit\033[0m\n");
     printf("Enter choice---->\t");
     scanf("%d", &choice);
     switch (choice) {

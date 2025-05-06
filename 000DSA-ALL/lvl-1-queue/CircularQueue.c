@@ -4,10 +4,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 int queue[MAX], Cfront = -1, Crear = -1;
+void clear_screen() {
+  printf("\033[2J\033[H");
+  fflush(stdout);
+}
 
 void circular_queue(void) {
+  clear_screen();
   while (106) {
-    printf(CYAN
+    printf(CRYON
            "\n\n\t\t===============Choose betn=======================\n" RESET);
     usleep(50000);
     printf(YELLOW "\t\t1. TO enqueue\n" RESET);
@@ -37,6 +42,7 @@ void circular_queue(void) {
       Cpeek();
       break;
     case 4:
+      clear_screen();
       return;
     case 0:
       printf(YELLOW "Exiting...\n" RESET);

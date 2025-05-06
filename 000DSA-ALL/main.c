@@ -1,0 +1,7 @@
+#include "lvl-1-queue/Queuemain.h"
+#include <stdio.h>
+
+int main() {
+  queue_main_call();
+  return 0;
+}

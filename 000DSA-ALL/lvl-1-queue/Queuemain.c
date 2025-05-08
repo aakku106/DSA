@@ -7,18 +7,17 @@
 void queue_main_call() {
   int choice;
   while (106) {
-    printf("\t\t\033[1;34mChoose Data Structure:\033[0m\n");
+    printf(
+        "\t\t\033[1;34m ===========Choose Data Structure:==========\033[0m\n");
     usleep(50000);
     printf("\t\t\033[1;32m--1. Linear Queue\033[0m\n");
     usleep(50000);
     printf("\t\t\033[1;33m--2. Circular Queue\033[0m\n");
     usleep(50000);
-    printf("\t\t\033[1;31m--0. Exit\033[0m\n");
-    usleep(50000);
     printf(CYAN "\t\t4. To exit Circular queue\n" RESET);
     usleep(50000);
     printf(RED "\t\t0.To exit program\n " RESET);
-    printf("Enter choice---->\t");
+    printf("\n\t\tEnter choice---->\t");
     scanf("%d", &choice);
     switch (choice) {
     case 1:

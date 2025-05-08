@@ -11,15 +11,15 @@ int main(void) {
   clear_screen();
   while (106) {
 
-    printf(CRYON "\n\t\t_-______-_CHOOSE BETWEEN_-________-_ \n" RESET);
+    printf(CRYON "\n\t\t_-______-_CHOOSE BETWEEN_-________-_\n" RESET);
     usleep(50000);
-    printf(YELLOW "\n\t\t1.STACK\n" RESET);
+    printf(YELLOW "\n\t\t1. STACK\n" RESET);
     usleep(50000);
-    printf(YELLOW "\n\t\t2.QUEUE\n" RESET);
+    printf(YELLOW "\t\t2. QUEUE\n" RESET);
     usleep(50000);
     printf(CYAN "\t\t4. To exit ADT\n" RESET);
     usleep(50000);
-    printf(RED "\t\t0.To exit program\n " RESET);
+    printf(RED "\t\t0. To exit program\n " RESET);
     int choice;
     scanf("%d", &choice);
     switch (choice) {

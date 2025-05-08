@@ -1,13 +1,10 @@
 #include "CircularQueue.h"
+#include "../ClearScreen.h"
 #include "../color.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 int queue[MAX], Cfront = -1, Crear = -1;
-void clear_screen() {
-  printf("\033[2J\033[H");
-  fflush(stdout);
-}
 
 void circular_queue(void) {
   clear_screen();

@@ -21,10 +21,10 @@ int main() {
   scanf("%d", &choice);
   switch (choice) {
   case 1:
-    queue_main_call();
+    stack_main_call();
     break;
   case 2:
-    stack_main_call();
+    queue_main_call();
   }
   return 0;
 }

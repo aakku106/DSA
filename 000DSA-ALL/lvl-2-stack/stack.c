@@ -19,7 +19,7 @@ void stack_main_call(void) {
     usleep(50000);
     printf(YELLOW "\t\t3. To Peek\n" RESET);
     usleep(50000);
-    printf(CYAN "\t\t4. To exit Circular queue\n" RESET);
+    printf(CYAN "\t\t4. To exit Stack\n" RESET);
     usleep(50000);
     printf(RED "\t\t0.To exit program\n " RESET);
     int choose, data;

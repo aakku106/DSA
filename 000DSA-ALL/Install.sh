@@ -2,7 +2,7 @@
 
 echo -e "\033[1;36m🔨 Compiling project...\033[0m"
 
-if gcc main.c lvl-1-queue/*.c -o queue; then
+if gcc main.c lvl-1-queue/*.c lvl-2-stack/*.c -o ADT; then
     echo -e "\033[1;32m✅ Build Success! Launch with: ./queue\033[0m"
 else
     echo -e "\033[1;31m❌ Build Failed! Check the errors Above ...\033[0m"

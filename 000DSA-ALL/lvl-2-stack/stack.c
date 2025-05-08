@@ -39,6 +39,7 @@ void stack_main_call(void) {
       peek();
       break;
     case 4:
+      clear_screen();
       return;
     case 0:
       exit(0);

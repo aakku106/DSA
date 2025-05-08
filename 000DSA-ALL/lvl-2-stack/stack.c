@@ -9,7 +9,6 @@ int stack[MAX], pointer = -1;
 void stack_main_call(void) {
   clear_screen();
   while (106) {
-
     printf(CRYON
            "\n\n\t\t===============Choose from=======================\n" RESET);
     usleep(50000);
@@ -44,7 +43,7 @@ void stack_main_call(void) {
     case 0:
       exit(0);
     default:
-      printf(RED "\t\t ?-?-?---------Choose correct optn-------!!!\n" RESET);
+      printf(RED "\t\t ?-?-?---------Choose correct optn-------!-!-!\n" RESET);
     }
   }
   return;
@@ -73,7 +72,7 @@ int isEmpty(void) {
 }
 void peek(void) {
   if (isEmpty() != -1) {
-    printf("\t\t--->%d<---\n", stack[pointer]);
+    printf(YELLOW "\t\t--->%d<---Will be pooped next !\n", stack[pointer]);
     return;
   }
   printf(RED "\n\t\tXXX----Its empty-----XXX \n" RESET);

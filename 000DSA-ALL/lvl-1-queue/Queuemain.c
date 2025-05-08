@@ -1,3 +1,4 @@
+#include "../ClearScreen.h"
 #include "../color.h"
 #include "CircularQueue.h"
 #include "LinearQueue.h"
@@ -27,6 +28,7 @@ void queue_main_call() {
       circular_queue();
       break;
     case 4:
+      clear_screen();
       return;
     case 0:
       printf("Exiting...\n");

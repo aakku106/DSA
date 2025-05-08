@@ -10,7 +10,6 @@
 int main(void) {
   clear_screen();
   while (106) {
-
     printf(CRYON "\n\t\t_-______-_CHOOSE BETWEEN_-________-_\n" RESET);
     usleep(50000);
     printf(YELLOW "\n\t\t1. STACK\n" RESET);
@@ -28,8 +27,8 @@ int main(void) {
       break;
     case 2:
       queue_main_call();
-
     case 4:
+      clear_screen();
       return 0;
     case 0:
       exit(0);

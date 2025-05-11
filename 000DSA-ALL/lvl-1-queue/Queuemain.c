@@ -6,12 +6,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 void queue_main_call() {
+  clear_screen();
   int choice;
   while (106) {
-    printf(
-        "\t\t\033[1;34m ===========Choose Data Structure:==========\033[0m\n");
+    printf("\n\n\t\t\033[1;34m ===========Choose Data "
+           "Structure:==========\033[0m\n");
     usleep(50000);
-    printf("\t\t\033[1;32m--1. Linear Queue\033[0m\n");
+    printf("\n\t\t\033[1;32m--1. Linear Queue\033[0m\n");
     usleep(50000);
     printf("\t\t\033[1;33m--2. Circular Queue\033[0m\n");
     usleep(50000);

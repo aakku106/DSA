@@ -17,10 +17,11 @@ int main(void) {
   for (int i = 0; i <= input; i++) {
     printf("\n\tEnter key\t");
     scanf("%d", &key);
-    if (hasTable[i] != -1)
+    int index = has_function(key, sizeOfTable);
+    if (hasTable[index] != -1)
       printf("\n\t\t Checl another file, we have no probing here\n");
     else {
-      hasTable[has_function(key, sizeOfTable)] = key;
+      hasTable[index] = key;
       i--;
     }
     printf("\n");

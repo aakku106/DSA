@@ -6,6 +6,10 @@ int main(void) {
   int sizeOfTable = 10;
   scanf("%d", &sizeOfTable);
   int *hasTable = calloc(sizeOfTable, sizeof(int));
+  for (int i = 0; i < sizeOfTable;) {
+    hasTable[i++] =
+        -1; // Finding out that C compiler only spams 0 with calloc lol  XD.
+  }
   int key;
   printf("\nhow many input do we have ??\t");
   int input;
@@ -13,7 +17,12 @@ int main(void) {
   for (int i = 0; i <= input; i++) {
     printf("\n\tEnter key\t");
     scanf("%d", &key);
-    hasTable[has_function(key, sizeOfTable)] = key;
+    if (hasTable[i] != -1)
+      printf("\n\t\t Checl another file, we have no probing here\n");
+    else {
+      hasTable[has_function(key, sizeOfTable)] = key;
+      i--;
+    }
     printf("\n");
     for (int j = 0; j < sizeOfTable; j++)
       printf("\t%d", hasTable[j]);

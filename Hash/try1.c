@@ -2,8 +2,10 @@
 #include <stdlib.h>
 int has_function(int, int);
 int main(void) {
-  int *hasTable = calloc(10, sizeof(int));
+  printf("\nInitilize the size of table(DEFULT 10)\t");
   int sizeOfTable = 10;
+  scanf("%d", &sizeOfTable);
+  int *hasTable = calloc(sizeOfTable, sizeof(int));
   int key;
   printf("\nhow many input do we have ??\t");
   int input;

@@ -12,7 +12,10 @@ int main(void) {
   printf("\nhow many input do we have ??\t");
   int input;
   scanf("%d", &input);
-  for (int i = 0; i <= input; i++) {
+  if (input > sizeOfTable)
+    printf("\nWarning: You're inserting more keys than table size. Collisions "
+           "incoming!\n");
+  for (int i = 0; i < input; i++) {
     printf("\n\tEnter key\t");
     scanf("%d", &key);
     int index = has_function(key, sizeOfTable), j = 0, oIndex = index;
@@ -22,6 +25,7 @@ int main(void) {
       index =
           (oIndex + j * j) % sizeOfTable; // Circular movment to next same like
                                           // circular quque but in sus way
+
       if (j > sizeOfTable) {
         printf(
             "\nNo space in array allocated by you, so %d can be inserted...\n",

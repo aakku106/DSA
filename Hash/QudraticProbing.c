@@ -22,7 +22,7 @@ int main(void) {
       index =
           (oIndex + j * j) % sizeOfTable; // Circular movment to next same like
                                           // circular quque but in sus way
-      if (hasTable[index] > sizeOfTable + 1) {
+      if (j > sizeOfTable) {
         printf(
             "\nNo space in array allocated by you, so %d can be inserted...\n",
             key);

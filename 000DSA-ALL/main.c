@@ -2,6 +2,7 @@
 #include "color.h"
 #include "lvl-1-queue/Queuemain.h"
 #include "lvl-2-stack/stack.h"
+#include "lvl-3-search/LinearSearch.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/_types/_sigaltstack.h>
@@ -16,7 +17,9 @@ int main(void) {
     usleep(50000);
     printf(YELLOW "\t\t2. QUEUE\n" RESET);
     usleep(50000);
-    printf(CYAN "\t\t4. To exit ADT\n" RESET);
+    printf("\t\t3. Linear Search\n");
+    usleep(50000);
+    printf(CYAN "\t\t4. To exit Program\n" RESET);
     usleep(50000);
     printf(RED "\t\t0. To exit program\n " RESET);
     int choice;
@@ -27,6 +30,10 @@ int main(void) {
       break;
     case 2:
       queue_main_call();
+      break;
+    case 3:
+      LinearMain();
+      break;
     case 4:
       clear_screen();
       return 0;

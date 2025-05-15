@@ -37,7 +37,7 @@ int main(void) {
       hasTable[index] = key;
     printf("\n");
     for (int k = 0; k < sizeOfTable; k++)
-      printf("\t%d", hasTable[k]);
+      printf("\t|  %d", hasTable[k]);
   }
   free(hasTable);
   return 0;

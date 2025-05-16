@@ -1,7 +1,7 @@
 #ifndef LINEAR_SEARCH_H
 #define LINEAR_SEARCH_H
 
-int linearSearch(int arr[], int, int);
-void LinearMain(void);
+int linear_search(int arr[], int, int);
+void linear_main(void);
 
 #endif

@@ -17,7 +17,7 @@ int main(void) {
     usleep(50000);
     printf(YELLOW "\t\t2. QUEUE\n" RESET);
     usleep(50000);
-    printf("\t\t3. Linear Search\n");
+    printf(YELLOW "\t\t3. Linear Search\n");
     usleep(50000);
     printf(CYAN "\t\t4. To exit Program\n" RESET);
     usleep(50000);
@@ -32,7 +32,7 @@ int main(void) {
       queue_main_call();
       break;
     case 3:
-      LinearMain();
+      linear_main();
       break;
     case 4:
       clear_screen();

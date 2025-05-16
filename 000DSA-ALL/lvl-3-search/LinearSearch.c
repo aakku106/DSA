@@ -2,7 +2,7 @@
 #include "../ClearScreen.h"
 #include "../color.h"
 #include <stdio.h>
-void Linearmain(void) {
+void linear_main(void) {
   clear_screen();
   printf(RED "NOTE:" CRYON "\nTHis is mear example, it has only defult values "
              "{90,2,9,33,44,6,3}\n" RESET);
@@ -14,9 +14,10 @@ void Linearmain(void) {
     scanf("%d", &target);
     switch (target) {
     case -1:
+      clear_screen();
       return;
     default:
-      result = linearSearch(arr, lenArr, target);
+      result = linear_search(arr, lenArr, target);
       if (result != -1) {
         printf(GREEN "\nElement %d found at index %d.\n", target, result);
         break;
@@ -27,7 +28,7 @@ void Linearmain(void) {
   }
   return;
 }
-int linearSearch(int arr[], int len, int target) {
+int linear_search(int arr[], int len, int target) {
   for (int i = 0; i < len; i++)
     if (arr[i] == target)
       return i;

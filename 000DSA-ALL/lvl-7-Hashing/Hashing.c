@@ -33,7 +33,7 @@ void hashing(void) {
       break;
     case 4:
       clear_screen();
-      return 0;
+      return;
     case 0:
       exit(0);
     default:

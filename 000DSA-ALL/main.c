@@ -2,7 +2,7 @@
 #include "color.h"
 #include "lvl-1-queue/Queuemain.h"
 #include "lvl-2-stack/stack.h"
-#include "lvl-3-search/LinearSearch.h"
+#include "lvl-3-search/SearchMain.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/_types/_sigaltstack.h>

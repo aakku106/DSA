@@ -1,5 +1,5 @@
-#ifndef LINEAR_SEARCH_H
-#define LINEAR_SEARCH_H
+#ifndef SEARCH_MAIN_H
+#define SEARCH_MAIN_H
 
 int linear_search(int arr[], int, int);
 void linear_main(void);

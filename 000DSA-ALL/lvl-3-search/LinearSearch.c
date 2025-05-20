@@ -1,6 +1,6 @@
-#include "LinearSearch.h"
 #include "../ClearScreen.h"
 #include "../color.h"
+#include "SearchMain.h"
 #include <stdio.h>
 void linear_main(void) {
   clear_screen();

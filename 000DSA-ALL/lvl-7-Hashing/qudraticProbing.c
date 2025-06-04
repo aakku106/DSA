@@ -1,6 +1,6 @@
+#include "./Hashing.h"
 #include <stdio.h>
 #include <stdlib.h>
-int has_function(int, int);
 void qudratic(void) {
   printf("\nInitilize the size of table(DEFULT 10)\t");
   int sizeOfTable = 10;
@@ -21,15 +21,15 @@ void qudratic(void) {
     int index = has_function(key, sizeOfTable), j = 0, oIndex = index;
     while (hasTable[index] != -1) {
       printf("\nCollision occured at %d, trying to resolve...\n", index);
-      ++j;
+      j++;
       index =
           (oIndex + j * j) % sizeOfTable; // Circular movment to next same like
                                           // circular quque but in sus way
 
       if (j > sizeOfTable) {
-        printf(
-            "\nNo space in array allocated by you, so %d can be inserted...\n",
-            key);
+        printf("\nNo space in array allocated by you, so %d can't be "
+               "inserted...\n",
+               key);
         return;
       }
     }
@@ -42,4 +42,4 @@ void qudratic(void) {
   free(hasTable);
   return;
 }
-int has_function(int key, int size) { return key % size; }
+// int has_function(int key, int size) { return key % size; }

@@ -1,3 +1,4 @@
+#include "./Hashing.h"
 #include <stdio.h>
 #include <stdlib.h>
 int has_function(int, int);
@@ -31,4 +32,4 @@ void linear(void) {
   free(hasTable);
   return;
 }
-int has_function(int key, int size) { return key % size; }
+// int has_function(int key, int size) { return key % size; }

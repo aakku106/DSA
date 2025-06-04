@@ -1,6 +1,6 @@
+#include "./Hashing.h"
 #include <stdio.h>
 #include <stdlib.h>
-int has_function(int, int);
 void normal(void) {
   printf("\nInitilize the size of table(DEFULT 10)\t");
   int sizeOfTable = 10;

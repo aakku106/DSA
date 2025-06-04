@@ -18,7 +18,7 @@ int main(void) {
     usleep(50000);
     printf(YELLOW "\t\t3. Search\n");
     usleep(50000);
-    printf(CYAN "\t\t4. To exit Program\n" RESET);
+    printf(YELLOW "\t\t7. Hash\n");
     usleep(50000);
     printf(RED "\t\t0. To exit program\n " RESET);
     int choice;
@@ -33,13 +33,14 @@ int main(void) {
     case 3:
       searching_main();
       break;
-    case 4:
-      clear_screen();
-      return 0;
+    case 7:
+      hashing();
+      break;
     case 0:
       exit(0);
     default:
       printf(RED "\t\t ?-?-?---------Choose correct optn-------!!!\n" RESET);
     }
   }
+  return 0;
 }

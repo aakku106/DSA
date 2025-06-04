@@ -1,6 +1,6 @@
 #include "ClearScreen.h"
 #include "color.h"
-#include "lvl-1-queue/Queuemain.h"
+#include "lvl-1-queue/Queue.h"
 #include "lvl-2-stack/stack.h"
 #include "lvl-3-search/SearchMain.h"
 #include <stdio.h>

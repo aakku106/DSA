@@ -1,7 +1,6 @@
 #include "../ClearScreen.h"
 #include "../color.h"
-#include "CircularQueue.h"
-#include "LinearQueue.h"
+#include "Queue.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

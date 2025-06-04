@@ -1,6 +1,7 @@
 #include "lvl-1-queue/Queue.h"
 #include "lvl-2-stack/stack.h"
 #include "lvl-3-search/SearchMain.h"
+#include "lvl-7-Hashing/Hashing.h"
 #include "utilities/Utlilties.h"
 #include <stdio.h>
 #include <stdlib.h>

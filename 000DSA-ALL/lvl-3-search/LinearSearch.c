@@ -1,5 +1,4 @@
-#include "../ClearScreen.h"
-#include "../color.h"
+#include "../utilities/Utlilties.h"
 #include "SearchMain.h"
 #include <stdio.h>
 void linear_main(void) {

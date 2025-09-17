@@ -15,7 +15,7 @@ void hashing(void) {
     usleep(50000);
     printf(YELLOW "\t\t3. Qudratic Probing\n");
     usleep(50000);
-    printf(CYAN "\t\t4. To exit Program\n" RESET);
+    printf(CYAN "\t\t4. To exit Hashing\n" RESET);
     usleep(50000);
     printf(RED "\t\t0. To exit program\n " RESET);
     int choice;

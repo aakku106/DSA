@@ -8,6 +8,17 @@
 #include <sys/_types/_sigaltstack.h>
 #include <unistd.h>
 
+typedef enum options {
+  EXIT,
+  STACK,
+  QUEUE,
+  SEARCH,
+  SHORT,
+  LINKEdLIST,
+  TREE,
+  HASH
+} option;
+
 int main(void) {
   clear_screen();
   while (106) {
@@ -25,19 +36,19 @@ int main(void) {
     int choice;
     scanf("%d", &choice);
     switch (choice) {
-    case 1:
+    case STACK:
       stack_main_call();
       break;
-    case 2:
+    case QUEUE:
       queue_main_call();
       break;
-    case 3:
+    case SEARCH:
       searching_main();
       break;
-    case 7:
+    case HASH:
       hashing();
       break;
-    case 0:
+    case EXIT:
       exit(0);
     default:
       printf(RED "\t\t ?-?-?---------Choose correct optn-------!!!\n" RESET);

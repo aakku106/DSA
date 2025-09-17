@@ -12,7 +12,7 @@ void searching_main() {
     usleep(50000);
     printf(YELLOW "\t\t2. Linear Search \n" RESET);
     usleep(50000);
-    printf(CYAN "\t\t4. To exit Program\n" RESET);
+    printf(CYAN "\t\t4. To exit Search\n" RESET);
     usleep(50000);
     printf(RED "\t\t0. To exit program\n " RESET);
     int choice;

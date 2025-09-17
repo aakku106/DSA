@@ -14,7 +14,7 @@ void queue_main_call() {
     usleep(50000);
     printf("\t\t\033[1;33m--2. Circular Queue\033[0m\n");
     usleep(50000);
-    printf(CYAN "\t\t4. To exit Circular queue\n" RESET);
+    printf(CYAN "\t\t4. To exit Queue\n" RESET);
     usleep(50000);
     printf(RED "\t\t0.To exit program\n " RESET);
     printf("\n\t\tEnter choice---->\t");
